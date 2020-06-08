@@ -1,0 +1,35 @@
+body {
+	background-image: url('resources/bg2.jpg');
+	background-size: cover;
+	font-family: lucida calligraphy;
+}
+
+#top_bar {
+	height: 60px;
+	text-align: center;
+	font-size: 35px;
+	color: #E040FB;
+	background: #212121;
+	font-family: forte;
+	font-weight: normal;
+	margin-bottom: 20%;
+}
+
+button {
+	background: crimson;
+	margin: 2%;
+	border-radius: 8px;
+	color: white;
+	height: 30px;
+	width: 100px; 
+	font-size: 18px;
+}
+
+#main_page > button {
+	float: left;
+}
+.newline {
+	clear: left;
+	margin-left: 35%;
+}
+

@@ -1,0 +1,52 @@
+body {
+	font-family: lucida calligraphy;
+	font-size: 18px;
+	font-weight: bold;
+	color: teal;
+	background: #C5CAE9;
+}
+
+.card {
+	width: 30%;
+	height: 500px;
+	margin: 1%;
+	float: left;
+}
+
+.flip_box {
+	background-color: transparent;
+  	border: 1px solid #f1f1f1;
+  	perspective: 1000px;
+}
+
+.flip_inner {
+	position: relative;
+  	text-align: center;
+  	transition: transform 0.8s;
+  	transform-style: preserve-3d;
+}
+
+.flip_box:hover .flip_inner {
+	transform: rotateY(180deg);
+}
+
+.flip_front, .flip_back {
+	position: absolute;
+  	-webkit-backface-visibility: hidden; 
+  	backface-visibility: hidden;
+}
+
+.flip_front {
+	background-color: #616161;
+}
+
+.flip_back {
+	background-color: #607D8B;
+  	color: white;
+  	transform: rotateY(180deg);
+}
+
+#image {
+	height: 400px;
+	width: 100%;
+}
