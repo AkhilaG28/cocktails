@@ -79,15 +79,31 @@ function display(drink) {
 	
 		var div_back = document.createElement('div')
 		div_back.setAttribute('class','flip_back')
+		div_back.textContent = 'Ingredients: '
 
-		//for (var j = 1; j < 16; j++) {
-		//var temp = 'strIngredient'+j
-		//console.log(drink.drinks[i])
-		//console.log(drink.drinks[i].strIngredient1)
-		//}
+		for (var j = 1; j < 16; j++) {
+			var temp = 'strIngredient' + j
+			var measure = 'strMeasure' + j
+			//console.log(temp)
+			//console.log(drink.drinks[i][temp])
+			if (drink.drinks[i][temp] != null) {
+				//console.log(drink.drinks[i][temp])
+				var div_ingre = document.createElement('div')
+				div_ingre.textContent = drink.drinks[i][temp] + ' - ' + drink.drinks[i][measure]
+				div_ingre.style.fontSize = '15px'
+				div_back.append(div_ingre)
+			}
+			else {
+				break
+			}
+		}
 
 		var div_instr = document.createElement('div')
 		div_instr.textContent = 'Instructions: ' + drink.drinks[i].strInstructions
+		div_instr.style.fontSize = '15px'
+		div_instr.style.paddingTop = '8px'
+		div_instr.style.color = 'white'
+
 		div_back.append(div_instr)
 
 		div_inner.append(div_front,div_back)
